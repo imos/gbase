@@ -4,8 +4,8 @@ set -eu
 
 cd output
 
-if [ -f ../archive.zip ]; then
-  rm ../archive.zip
+if [ -f ../gbase.zip ]; then
+  rm ../gbase.zip
 fi
 
-zip -r ../archive.zip third_party/ WORKSPACE --exclude \*\*/.DS_Store
+zip -r ../gbase.zip third_party/ WORKSPACE --exclude \*\*/.DS_Store

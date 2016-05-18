@@ -1,4 +1,4 @@
-archive: output
+gbase.zip: output
 	bash archive.sh
 
 test: output
