@@ -1,0 +1,35 @@
+http_archive(
+    name = "gbase",
+    url = "https://github.com/imos/gbase/releases/download/v0.8.0/gbase.zip",
+    sha256 = "7d249cc918390b5aa7085ce2f4205bd0d2546f39af967482ebdf2eb1c32bb813",
+)
+
+bind(
+    name = "glog",
+    actual = "@gbase//third_party/glog"
+)
+
+bind(
+    name = "gflags",
+    actual = "@gbase//third_party/gflags"
+)
+
+bind(
+    name = "gtest",
+    actual = "@gbase//third_party/gtest"
+)
+
+bind(
+    name = "gtest_main",
+    actual = "@gbase//third_party/gtest:gtest_main"
+)
+
+bind(
+    name = "gmock",
+    actual = "@gbase//third_party/gmock"
+)
+
+bind(
+    name = "gmock_main",
+    actual = "@gbase//third_party/gmock:gmock_main"
+)

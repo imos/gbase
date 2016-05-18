@@ -6,8 +6,8 @@ cc_binary(
     name = "glog_main",
     srcs = ["glog_main.cc"],
     deps = [
-        "//third_party/glog",
-        "//third_party/gflags",
+        "//external:glog",
+        "//external:gflags",
     ],
 )
 
@@ -15,7 +15,7 @@ cc_test(
     name = "gmock_test",
     srcs = ["gmock_test.cc"],
     deps = [
-        "//third_party/gmock:gmock_main",
+        "//external:gmock_main",
     ],
 )
 
@@ -23,6 +23,6 @@ cc_test(
     name = "gtest_test",
     srcs = ["gtest_test.cc"],
     deps = [
-        "//third_party/gtest:gtest_main",
+        "//external:gtest_main",
     ],
 )
