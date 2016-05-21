@@ -26,3 +26,12 @@ cc_test(
         "//external:gtest_main",
     ],
 )
+
+cc_test(
+    name = "strings_test",
+    srcs = ["strings_test.cc"],
+    deps = [
+        "//external:base",
+        "//external:gmock_main",
+    ],
+)

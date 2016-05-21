@@ -8,4 +8,4 @@ if [ -f ../gbase.zip ]; then
   rm ../gbase.zip
 fi
 
-zip -r ../gbase.zip third_party/ WORKSPACE --exclude \*\*/.DS_Store --exclude test/*
+zip -r ../gbase.zip * --exclude \*\*/.DS_Store --exclude test
