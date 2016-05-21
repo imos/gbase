@@ -9,3 +9,8 @@ output: repository
 
 repository:
 	bash repository.sh
+
+clean:
+	-rm -rf output
+	-rm -rf generated
+.PHONY: clean

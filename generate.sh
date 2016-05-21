@@ -112,6 +112,21 @@ generate_gmock() {
   done
 }
 
+generate_base() {
+  # Remove to override with glog.
+  rm generated/lmctfy/base/logging.*
+  # Remove files not supported by Mac OSX.
+  rm generated/lmctfy/base/sysinfo.*
+  rm generated/lmctfy/base/walltime.*
+  # Duplicated functions exist.
+  rm generated/lmctfy/strings/strutil.*
+
+  cp generated/lmctfy/base/*.{cc,h} output/base/
+  cp generated/lmctfy/strings/*.{cc,h} output/strings/
+  cp generated/lmctfy/util/gtl/*.h output/util/gtl/
+  cp generated/lmctfy/util/utf/*.{cc,h} output/util/utf/
+}
+
 if [ -d output ]; then
   rm -rf output
 fi
@@ -120,3 +135,4 @@ generate_gflags
 generate_glog
 generate_gtest
 generate_gmock
+generate_base
