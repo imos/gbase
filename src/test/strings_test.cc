@@ -4,6 +4,12 @@
 #include "third_party/gtest/gtest.h"
 #include "third_party/gmock/gmock.h"
 
+// NOTE: StringPrintf is implemented under base/, but this is placed here
+// because this is often used with strings.
+TEST(BaseTest, StringPrintf) {
+  EXPECT_EQ("01234", StringPrintf("%05d", 1234));
+}
+
 TEST(StringsTest, StrCat) {
   EXPECT_EQ("FooBar", StrCat("Foo", "Bar"));
   EXPECT_EQ("Foo12345Bar", StrCat("Foo", 12345, "Bar"));
