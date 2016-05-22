@@ -14,7 +14,7 @@ cc_test(
     name = "gmock_test",
     srcs = ["gmock_test.cc"],
     deps = [
-        "//third_party/gmock:gmock_main",
+        "//base:testing_main",
     ],
 )
 
@@ -22,7 +22,7 @@ cc_test(
     name = "gtest_test",
     srcs = ["gtest_test.cc"],
     deps = [
-        "//third_party/gtest:gtest_main",
+        "//base:testing_main",
     ],
 )
 
@@ -31,6 +31,6 @@ cc_test(
     srcs = ["strings_test.cc"],
     deps = [
         "//base",
-        "//third_party/gmock:gmock_main",
+        "//base:testing_main",
     ],
 )
