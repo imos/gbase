@@ -1,4 +1,4 @@
-#include "third_party/gtest/gtest.h"
+#include "base/testing.h"
 
 TEST(GTest, Test) {
   ASSERT_TRUE(true);

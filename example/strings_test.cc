@@ -1,8 +1,7 @@
 #include <stdio.h>
 
 #include "base/base.h"
-#include "third_party/gtest/gtest.h"
-#include "third_party/gmock/gmock.h"
+#include "base/testing.h"
 
 // NOTE: StringPrintf is implemented under base/, but this is placed here
 // because this is often used with strings.
