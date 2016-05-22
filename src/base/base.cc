@@ -5,4 +5,5 @@
 void ParseCommandLineFlags(int* argc, char*** argv) {
   google::ParseCommandLineFlags(argc, argv, true);
   google::InitGoogleLogging((*argv)[0]);
+  google::InstallFailureSignalHandler();
 }
