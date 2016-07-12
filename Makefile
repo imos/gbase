@@ -11,6 +11,7 @@ repository:
 	bash repository.sh
 
 clean:
+	-rm gbase.zip
 	-rm -rf output
 	-rm -rf generated
 .PHONY: clean

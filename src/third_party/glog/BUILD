@@ -8,5 +8,6 @@ cc_library(
     hdrs = glob(["*.h", "base/*.h"]),
     visibility = ["//visibility:public"],
     deps = ["//third_party/gflags"],
+    linkopts = ["-pthread"],
     alwayslink = 1,
 )

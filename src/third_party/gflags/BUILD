@@ -7,5 +7,6 @@ cc_library(
     srcs = glob(["*.cc"], exclude = ["windows_*.cc"]),
     hdrs = glob(["*.h"], exclude = ["windows_*.h"]),
     visibility = ["//visibility:public"],
+    linkopts = ["-pthread"],
     alwayslink = 1,
 )

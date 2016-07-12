@@ -11,7 +11,8 @@ fi
 cp -a repository generated
 
 replace() {
-  sed -i '' -e "s/${1//\//\\/}/${2//\//\\/}/g" "$3"
+  sed -i.bak -e "s/${1//\//\\/}/${2//\//\\/}/g" "$3"
+  rm "$3.bak"
 }
 
 generate_gflags() {
@@ -39,7 +40,7 @@ generate_glog() {
   popd
   mkdir -p output/third_party/glog/
   cp generated/glog/src/glog/*.h output/third_party/glog/
-  cp generated/glog/src/*.cc  generated/glog/src/*.h \
+  cp -f generated/glog/src/*.cc  generated/glog/src/*.h \
      output/third_party/glog/
   cp -a generated/glog/src/base output/third_party/glog/base
   rm output/third_party/glog/*test*.cc
@@ -59,6 +60,7 @@ generate_glog() {
             '#include "third_party/glog/base/\1"' \
             "${file}"
   done
+  cp -f src/third_party/glog/config.h output/third_party/glog/config.h
 }
 
 generate_gtest() {
