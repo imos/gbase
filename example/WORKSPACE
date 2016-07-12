@@ -1,7 +1,7 @@
 http_archive(
     name = "gbase",
-    url = "https://github.com/imos/gbase/releases/download/v0.8.2/gbase.zip",
-    sha256 = "c555b1853fac21a0fceb72e3a7658b9e9be232fca4fbadff4129bb01dc9659cf",
+    url = "https://github.com/imos/gbase/releases/download/v0.8.3/gbase.zip",
+    sha256 = "bd1925d2b25b947f2e151fc440a760c3d557f79b6f7ca4cd003f8d4fdbead699",
 )
 
 bind(
