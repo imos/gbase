@@ -1,6 +1,6 @@
 #include "base/base.h"
 #include "base/testing.h"
-#include "example/example.pb.h"
+#include "example.pb.h"
 #include "src/google/protobuf/text_format.h"
 
 using google::protobuf::TextFormat;
