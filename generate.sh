@@ -129,6 +129,18 @@ generate_base() {
   cp generated/lmctfy/util/utf/*.{cc,h} output/util/utf/
 }
 
+generate_map_util() {
+  cp generated/protobuf/src/google/protobuf/stubs/map_util.h \
+     output/util/gtl/
+  local file='output/util/gtl/map_util.h'
+  replace 'namespace google {' '' "${file}"
+  replace 'namespace protobuf {' '' "${file}"
+  replace '}  // namespace google' '' "${file}"
+  replace '}  // namespace protobuf' '' "${file}"
+  replace '#include <google/protobuf/stubs/common.h>' \
+          '#include "third_party/glog/logging.h"' "${file}"
+}
+
 if [ -d output ]; then
   rm -rf output
 fi
@@ -138,3 +150,4 @@ generate_glog
 generate_gtest
 generate_gmock
 generate_base
+generate_map_util

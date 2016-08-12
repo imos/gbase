@@ -14,6 +14,9 @@
 #include "strings/util.h"
 #include "third_party/gflags/gflags.h"
 #include "third_party/glog/logging.h"
+#include "util/gtl/algorithm.h"
+#include "util/gtl/map_util.h"
+#include "util/gtl/stl_util.h"
 
 void ParseCommandLineFlags(int* argc, char*** argv);
 
