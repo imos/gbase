@@ -85,6 +85,8 @@ generate_gtest() {
             '#include "third_party/gtest/\1"' \
             "${file}"
   done
+  replace '.*kPathSeparatorString.*' '' \
+          'output/third_party/gtest/gtest-filepath.cc'
 }
 
 generate_gmock() {
